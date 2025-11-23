@@ -1,0 +1,24 @@
+_BASE_: ../Base-SBS.yml
+
+MODEL:
+  BACKBONE:
+    NAME: build_resnest_backbone
+
+TEST:
+  IMS_PER_BATCH: 256
+  PRECISE_BN:
+    DATASET: SDSObject
+
+INPUT:
+  SIZE_TRAIN: [256, 256]
+  SIZE_TEST: [256, 256]
+
+DATASETS:
+  NAMES: ("SDSObject",)
+  TESTS: ("SDSObject",)
+
+SOLVER:
+  IMS_PER_BATCH: 256
+  MAX_EPOCH: 80
+
+OUTPUT_DIR: Outputs/ReID/SDSObject/sbs_S50

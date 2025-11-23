@@ -1,0 +1,24 @@
+_BASE_: ../Base-SBS.yml
+
+MODEL:
+  BACKBONE:
+    NAME: build_resnest_backbone
+
+TEST:
+  IMS_PER_BATCH: 256
+  PRECISE_BN:
+    DATASET: SMDVIS
+
+INPUT:
+  SIZE_TRAIN: [ 256, 256]
+  SIZE_TEST: [ 256, 256 ]
+
+DATASETS:
+  NAMES: ("SMDVIS",)
+  TESTS: ("SMDVIS",)
+
+SOLVER:
+  IMS_PER_BATCH: 256
+  MAX_EPOCH: 80
+
+OUTPUT_DIR: Outputs/ReID/SMDVIS/sbs_S50

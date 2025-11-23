@@ -1,0 +1,205 @@
+sort:
+  det_thresh: 0.5
+  min_hits: 6
+  max_age: 46
+  iou_threshold: 0.6
+  category_aware_tracking: false
+
+deepsort:
+  det_thresh: 0.5
+  max_cosine_distance: 0.3
+  max_iou_distance: 0.4
+  min_hits: 6
+  max_age: 30
+  nn_budget: 51
+  match_thresh: 0.3
+  category_aware_tracking: false
+
+bytetrack:
+  det_thresh: 0.1
+  det_high_thresh: 0.6
+  track_buffer: 21
+  match_thresh: 0.7
+  fuse_score: false
+  category_aware_tracking: false
+
+ocsort:
+  det_thresh: 0.5
+  max_age: 20
+  min_hits: 6
+  iou_threshold: 0.39
+  delta_t: 3
+  inertia: 0.33
+  category_aware_tracking: false
+
+strongsort:
+  min_confidence: 0.6
+  max_iou_distance: 0.6
+  n_init: 6
+  max_age: 18
+  EMA_alpha: 0.8
+  MC_lambda: 0.8
+  max_dist: 0.8
+  category_aware_tracking: false
+
+hybridsort:
+  low_thresh: 0.1
+  det_thresh: 0.7
+  max_age: 30
+  min_hits: 1
+  iou_threshold: 0.2
+  delta_t: 1
+  inertia: 0.08
+  TCM_first_step_weight: 1.7
+  TCM_byte_step_weight: 1.3
+
+botsort:
+  track_low_thresh: 0.2
+  track_high_thresh: 0.6
+  new_track_thresh: 0.7
+  track_buffer: 21
+  match_thresh: 0.6
+  proximity_thresh: 0.3
+  appearance_thresh: 0.2
+  fuse_score: false
+  category_aware_tracking: false
+
+GNN_NonProb_StoneSoup:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  gating_distance: 5.777
+
+GNN_Prob_StoneSoup:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+
+JPDAwithNBest:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+  top_n_hypotheses: 3
+
+JPDAwithLBP:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+
+JPDAwithEHM:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+
+JPDAwithEHM2:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+
+MHTStoneSoup:
+  det_thresh: 0.6
+  q_std_position_xy: 8.0
+  q_std_position_w: 10.0
+  q_std_position_h: 7.0
+  r_std_position_xy: 7.0
+  r_std_position_w: 82.0
+  r_std_position_h: 80.0
+  p_std_position_xy: 14.0
+  p_std_position_w: 95.0
+  p_std_position_h: 66.0
+  p_std_velocity_xy: 38.0
+  p_std_velocity_w: 52.0
+  p_std_velocity_h: 52.0
+  time_steps_since_update: 17
+  min_initiation_points: 15
+  prob_detect: 0.99999999
+  prob_gate: 0.999999
+  clutter_rate: 177.0
+  top_n_hypotheses: 3

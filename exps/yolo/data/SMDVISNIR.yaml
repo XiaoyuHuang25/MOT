@@ -1,0 +1,10 @@
+
+path: datasets/smd/images/VISNIR  # dataset root dir
+train: train
+val: val
+test: test
+
+# Classes
+nc: 10  # number of classes
+names: ['Ferry', 'Buoy', 'Vessel/ship', 'Speed boat', 'Boat', 'Kayak', 'Sail boat', 'Swimming person', 'Flying bird/plane', 'Other']
+

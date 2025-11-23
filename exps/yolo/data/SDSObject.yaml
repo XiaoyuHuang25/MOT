@@ -1,0 +1,10 @@
+
+path: datasets/sds/images/Object  # dataset root dir
+train: train
+val: val
+test: test
+
+# Classes
+nc: 7  # number of classes
+names: ['swimmer', 'floater', 'boat', 'swimmer on boat', 'floater on boat', 'life jacket', 'ignored']
+
